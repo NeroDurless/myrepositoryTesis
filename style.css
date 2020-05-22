@@ -9,8 +9,8 @@
 }
 .login-page p {
 	text-align: center;
-	color: #FFF;
-	font-size: 36px;
+	color: #666;
+	font-size: 12px;
 	font-family: "Comic Sans MS", cursive;
 }
 .form {
@@ -120,4 +120,3 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;      
 }
-
