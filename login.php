@@ -15,35 +15,32 @@
   <div class="form">
  
   <form action="comprueba_registro.php" method="post" class="register-form">
-  
-  
+ 
       <input type="text" name="usu" id="usu" placeholder="Usuario"/>
       <input type="password" name="contra" id="contra" placeholder="Contraseña"/>
       
       <button>Crear</button>
+      
       <p class="message">¿Registrado? <a href="#">¡Loguéate!</a></p>
+      
   </form>
 
 
-
-
     <form action="comprueba_login.php" method="post" class="login-form">
-      <p>
+      
         <input type="text" name="login" id="login" placeholder="Usuario"/>
         <input type="password" name="password" id="password" placeholder="Contraseña"/>
-      </p>
-      <button>login</button>
-      <p class="message">¿No te has registrado? <a href="#">Crea una cuenta</a></p>
+      
+        <button>login</button>
+      
+        <p class="message">¿No te has registrado? <a href="#">Crea una cuenta</a></p>
+        
     </form>
-    
-    
-    
     
   </div>
 </div>
 
-  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
     <script  src="index.js"></script>
 
