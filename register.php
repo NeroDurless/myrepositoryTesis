@@ -9,6 +9,21 @@
 
 <body>
 
+<div class="login-page">
+  <div class="form">
+    <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post" class="login-form">
+    <p>
+        <input type="text" name="login" id="login" placeholder="Usuario"/>
+        <input type="password" name="password" id="password" placeholder="Contraseña"/>
+      </p>
+      
+      <td class="crea-button"><input name='cr' type='submit' class="crea-button" id='cr' value='Crear'></td>
+      
+      <p class="message">¿Registrado? <a href="login.php">Loguéate</a></p>
+    </form>
+  </div>
+</div>
+
 <?php
 
 	include("conexion.php");
@@ -21,7 +36,7 @@
 			$Log=$_POST["login"];
 			$Pas=$_POST["password"];
 			
-			$sql="INSERT INTO USUARIOS_PASS (USUARIOS, PASSWORD) VALUES (:usu, :pas)";
+			$sql="INSERT INTO USUARIOS_PASS (USUARIO, PASSWORD) VALUES (:usu, :pas)";
 			
 			$resultado=$base->prepare($sql);
 			
@@ -30,23 +45,9 @@
 			header("location:register.php");
 		 
 	    }
-	
+?>
 
 
-?> 
-
-  <div class="login-page">
-  <div class="form">
- 
-   <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post" class="login-form">
-      <input type="text" name="login" id="login" placeholder="Usuario"/>
-      <input type="password" name="password" id="password" placeholder="Contraseña"/>
-    <td class="button"><input type='submit' name='cr' id='cr' value='Crear'></td>
-     <p class="message">¿Registrado? <a href="login.php">Logueate</a></p>
-    </form>
-
-  </div>
-</div>
 
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 

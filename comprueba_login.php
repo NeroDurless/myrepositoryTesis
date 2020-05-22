@@ -88,7 +88,12 @@
 		exit(); 
 	}
 	
-		else if($numero_registro2 != 0) 
+		else 
+	{
+		header("location:login.php");
+	}
+		
+		if($numero_registro2 != 0) 
 	{
 		session_start();
 	 
@@ -96,8 +101,13 @@
 		header("location:usuarios_registrados.php");
 		exit(); 
 	}
+	
+	 	else 
+	{
+		header("location:login.php");
+	}
 	 
-		else if($numero_registro3 != 0)
+	 if($numero_registro3 != 0)
 	{
 		session_start();
 		
@@ -105,16 +115,26 @@
 		header("location:usuarios_registrados.php");
 		exit(); 
 	}
+	
+		else 
+	{
+		header("location:login.php");
+	}
 	 
-		else if($numero_registro4 != 0)
+	if($numero_registro4 != 0)
 	{
 		session_start();
 		
 		$_SESSION['per'] = $_POST["login"];
 		header("location:usuarios_registrados.php");
+	}
+	
+		else 
+	{
 		
-	} 
-							
+		header("location:login.php");
+	}
+								
 	}catch(Exception $e)
 	
 	{
