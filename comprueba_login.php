@@ -11,6 +11,8 @@
 
 //include('login.php');
 
+	$contador=0;
+
 	try{
 		
 		$base = new PDO("mysql:host=localhost; dbname=pruebas", "root", "");
@@ -19,7 +21,7 @@
 		$base->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		//Propiedades de la conexión con la BD
 
-		$sql = "SELECT * FROM USUARIOS_PASS WHERE USUARIO = :login AND PASSWORD= :password";
+		$sql = "SELECT * FROM USUARIOS_PASS WHERE USUARIO = :login";
 		$adm = "SELECT * FROM USUARIOS_ADM WHERE USUARIO = :usu1 AND PASSWORD = :pas1";
 		$tec = "SELECT * FROM USUARIOS_TEC WHERE USUARIO = :usu2 AND PASSWORD = :pas2";
 		$per = "SELECT * FROM USUARIOS_PER WHERE USUARIO = :usu3 AND PASSWORD = :pas3";
@@ -65,7 +67,7 @@
 		//bindValue es una función que realiza la equivalencia entre mis marcadores :login y :password
 		//con lo que se encuentra almmacenado en mis varviables del mismo nombre
 		
-		$resultado->execute();
+		$resultado->execute(array(":login"=>$login));
 		$resultado2->execute();
 		$resultado3->execute();
 		$resultado4->execute();
@@ -77,6 +79,23 @@
 		$numero_registro4=$resultado4->rowCount();
 
 		//rowCount() me dice el número de registros que devuelve una consulta
+		
+		
+		while ($registro=$resultado->fetch(PDO::FETCH_ASSOC))
+		{
+
+
+			if(password_verify($password, $registro['PASSWORD']))
+				{
+					$contador++;
+				}
+			
+		}
+			
+			if($contador>0)
+				{
+					header("location:login.php");
+				}
 
 		
 		if($numero_registro != 0) 

@@ -14,7 +14,7 @@
 	$usuario= $_POST["usu"];
 	$contraseña= $_POST["contra"];
 	
-	$pass_cifrado=password_hash($contraseña, PASSWORD_DEFAULT);
+	$pass_cifrado=password_hash($contraseña, PASSWORD_DEFAULT, array("cost"=>12));
 
 	try{
 		
@@ -34,6 +34,8 @@
 		//Prepare es una función que se encargará de preparar nuestra sentencia SQL
 		
 		$resultado->execute(array(":usu"=>$usuario, ":contra"=>$pass_cifrado));
+		
+		header("location:login.php");
 		
 		
 		
