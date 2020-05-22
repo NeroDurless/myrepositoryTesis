@@ -27,8 +27,8 @@ form {
       <p></p>
 
  
-      <input type="text" name="usu" id="usu" placeholder="Usuario"/>
-      <input type="password" name="contra" id="contra" placeholder="Contraseña"/>
+      <input type="text" name="usu" id="usu" required placeholder="Usuario"/>
+      <input type="password" name="contra" id="contra" required placeholder="Contraseña"/>
       
       <button>Crear</button>
       
@@ -41,8 +41,8 @@ form {
     Sistema de Registro de Pacientes y Control de Citas
     <p></p>
       
-        <input type="text" name="login" id="login" placeholder="Usuario"/>
-          <input type="password" name="password" id="password" placeholder="Contraseña"/>
+        <input type="text" name="login" id="login" required placeholder="Usuario"/>
+          <input type="password" name="password" id="password" required placeholder="Contraseña"/>
           
         
         <button>login</button>
