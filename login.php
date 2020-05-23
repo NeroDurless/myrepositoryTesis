@@ -76,7 +76,6 @@
            {  
 		   	swal("¡Error!", "¡Todos los campos son requeridos!", "error");
 		   
-                $('#error_message').html("All Fields are required");  
            }  
            else  
            {  
@@ -86,7 +85,7 @@
  }
  }
  
- 
+</script> 
  
 
 
