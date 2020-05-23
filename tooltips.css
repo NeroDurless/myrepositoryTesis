@@ -1,0 +1,45 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+.tooltip{
+    position:absolute;
+    z-index:1020;
+    display:block;
+    visibility:visible;
+    padding:5px;
+    font-size:13px;
+    opacity:0;
+    filter:alpha(opacity=0)
+}
+
+.tooltip-inner{
+    width:350px;
+    padding:3px 8px;
+    color:#FFF;
+    text-align:center;
+    background: #4a638e; 
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+    border: 1px solid #314A5B;
+}
+
+
+.tooltip-arrow{
+    position:absolute;
+    width:0;
+    height:0
+}
+/*A class for form controls*/
+.inputstl { 
+    padding: 9px; 
+    border: solid 1px #B3FFB3; 
+    outline: 0; 
+    background: -webkit-gradient(linear, left top, left 25, from(#FFFFFF), color-stop(4%, #A4FFA4), to(#FFFFFF)); 
+    background: -moz-linear-gradient(top, #FFFFFF, #A4FFA4 1px, #FFFFFF 25px); 
+    box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px; 
+    -moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px; 
+    -webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px; 
+
+    } 
