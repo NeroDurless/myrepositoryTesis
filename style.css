@@ -14,6 +14,9 @@
 	font-family: "Comic Sans MS", cursive;
 }
 .form {
+  color: #333;
+  font-family: "Comic Sans MS", cursive;
+  font-size: 20px;
   position: relative;
   z-index: 1;
   background: #FFFFFF;

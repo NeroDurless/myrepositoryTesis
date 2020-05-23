@@ -1,0 +1,127 @@
+@charset "utf-8";
+/* CSS Document */
+
+.btn {
+	font-style: normal;
+  font-size: 12px;
+  text-align: center;
+  width: 70px;
+  height: 30px;
+}
+
+.btn-circle-micro {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  text-align: center;
+  width: 19px;
+  height: 19px;
+}
+
+
+
+
+.container .row.justify-content-center .col-md-8 .card .card-body form .form-group.row.mb-0 .col-md-8.offset-md-4 .btn.btn-primary {
+	font-style: normal;
+	  font-size: 13px;
+	  text-align: center;
+	  width: 80px;
+	  height: 40px;
+}
+
+
+
+
+<!--BOTONES DE BUSQUEDA-->
+
+.row .col-lg-12 .input-group .input-group-btn {
+	color: #0C9;
+}
+
+.row .col-lg-12 .input-group .input-group-btn .btn.btn-primary {
+	font-style: normal;
+  font-size: 12px;
+  text-align: center;
+  width: 70px;
+  height: 38px;
+}
+
+.row .col-lg-12 .input-group .input-group-btn .btn.btn-danger {
+	font-style: normal;
+  font-size: 12px;
+  text-align: center;
+  width: 70px;
+  height: 38px;
+}
+<!--BOTONES DE BUSQUEDA-->
+
+.container .row.justify-content-center .col-md-8 .card .card-body form .form-group.row.mb-0 .col-md-8.offset-md-4 .btn.btn-primary {
+	font-style: normal;
+	  font-weight: bold;
+  font-size: 13px;
+  text-align: center;
+  width: 80px;
+  height: 40px;
+}
+
+.container .row.justify-content-center .col-md-8 .card .card-body form .form-group.row.mb-0 .col-md-6.offset-md-4 .btn.btn-primary {
+	font-style: normal;
+	  font-weight: bold;
+  font-size: 13px;
+  text-align: center;
+  width: 318px;
+  height: 40px;
+}
+
+.container .row.justify-content-center .col-md-12.col-md-offset-12 .card .card-header.bg-dark h3 {
+	color: #FFF;
+}
+
+.container .row.justify-content-center .col-md-8 .card .card-header.bg-dark {
+	color: #FFF;
+}
+
+.btn.btn-circle-lg.btn-warning .fa.fa-list {
+	  color: #FFF;
+	  font-size: 14px;
+
+	
+}
+
+.btn-circle-lg {
+	font-style: normal;
+	  font-weight: bold;
+  font-size: 13px;
+  text-align: center;
+  width: 60px;
+  height: 30px;
+}
+
+span.icon:before { 
+  font-family: 'Glyphicons Halflings'; 
+  content: "\f015"; 
+}
+
+
+.row .col-lg-12.col-md-12.col-sm-12.col-xs-12 .table-responsive .table.table-striped.table-bordered.table-condensed.table-hover thead tr th {
+	color: #FFF;
+}
+
+.active
+		{
+			background: #047DBD;
+		}
+		
+.container .row.justify-content-center .col-md-12.col-md-offset-12 .card .card-body .card-title {
+	font-size: 24px;
+}
+
+.form-group {
+	font-weight: bold;
+}
+
+.asterisco {
+	color: #F00;
+	font-size: 15px;
+	font-weight: bold;
+}

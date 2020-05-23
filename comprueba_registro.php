@@ -11,10 +11,12 @@
 
 //include('login.php');
 
-	$usuario= $_POST["usu"];
-	$contraseña= $_POST["contra"];
+	$usuario= ( empty($_POST['usu']) )   ? NULL : $_POST['usu'];
+	$contraseña= ( empty($_POST['contra']) );
 	
-	$pass_cifrado=password_hash($contraseña, PASSWORD_DEFAULT, array("cost"=>12));
+	$pass_cifrado=password_hash($contraseña, PASSWORD_DEFAULT, array("cost"=>12)) ? NULL : $_POST['contra'];
+	
+	
 
 	try{
 		
@@ -39,11 +41,10 @@
 		
 		
 		
-					
 	}catch(Exception $e)
 	
 	{
-		die("Error: " . $e->getMessage());
+					header("location:login.php");
 	}
 
 ?>

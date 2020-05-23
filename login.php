@@ -1,33 +1,38 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
 <title>Página de logeo</title>
+
+
 <link rel="stylesheet" type="text/css" href="style.css">
-<style type="text/css">
-form {
-	color: #333;
-	font-family: "Comic Sans MS", cursive;
-	font-size: 20px;
-}
-</style>
-<script src="js/live.js"></script>
+<!--<link rel="stylesheet" href="btns.css" />
+<link rel="stylesheet" href="circle.css" />
+<link rel="stylesheet" href="circu.css" />-->
+
+
+
+
+
+<script src="inton.js"></script>
+<script src="live.js"></script>
+
+
 </head>
-
-
 
 <body>
 
   <div class="login-page">
   <div class="form">
- 
+  
   <form action="comprueba_registro.php" method="post" class="register-form">
-      Sistema de Registro de Pacientes y Control de Citas
+      Por favor ingrese solo su nombre y una contraseña con solo números.
       <p></p>
 
- 
-      <input type="text" name="usu" id="usu" required placeholder="Usuario"/>
+      <input type="text" name="usu" id="usu" required placeholder="Usuario"/>      
+      
+      
       <input type="password" name="contra" id="contra" required placeholder="Contraseña"/>
       
       <button onclick="validation();">Crear</button>
@@ -62,15 +67,28 @@ form {
 
 <script type="text/javascript">
 
-	
+
 	function validation()
 				{
-		
-		 swal("¡Genial!", "¡Usuario registrado satisfactoriamente!", "success");
-		}
+           var usu = $('#usu').val();  
+           var contra = $('#contra').val();  
+           if(usu == '' || contra == '')  
+           {  
+		   	swal("¡Error!", "¡Todos los campos son requeridos!", "error");
+		   
+                $('#error_message').html("All Fields are required");  
+           }  
+           else  
+           {  
+		   swal("¡Genial!", "¡Usuario registrado satisfactoriamente!", "success");
+         
+            
+ }
+ }
+ 
+ 
+ 
 
-		
-</script>
 
 </body>
 
