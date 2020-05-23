@@ -9,52 +9,57 @@
 
 <body>
 
-<div class="login-page">
+
+  <div class="login-page">
   <div class="form">
-    <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post" class="login-form">
-    <p>
-        <input type="text" name="login" id="login" placeholder="Usuario"/>
-        <input type="password" name="password" id="password" placeholder="Contraseña"/>
-      </p>
+ 
+   <form action="comprueba_registro.php" method="post" class="login-form">
+   
+     <input type="text" name="usu" id="usu" required placeholder="Usuario"/>      
       
-      <td class="crea-button"><input name='cr' type='submit' class="crea-button" id='cr' value='Crear'></td>
       
-      <p class="message">¿Registrado? <a href="login.php">Loguéate</a></p>
+      <input type="password" name="contra" id="contra" required placeholder="Contraseña"/>
+      
+      <button onclick="validation();">Crear</button>
+      
+      <p class="message">¿Registrado? <a href="login.php">¡Loguéate!</a></p>
     </form>
+
   </div>
 </div>
 
-<?php
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
-	include("conexion.php");
-	
-	$registros=$base->query("SELECT * FROM USUARIOS_PASS")->fetchAll(PDO::FETCH_OBJ);
-	//Dentro de la variable $registros tengo un Array de objetos
-	
-	if(isset($_POST["cr"]))
-		{	
-			$Log=$_POST["login"];
-			$Pas=$_POST["password"];
-			
-			$sql="INSERT INTO USUARIOS_PASS (USUARIO, PASSWORD) VALUES (:usu, :pas)";
-			
-			$resultado=$base->prepare($sql);
-			
-			$resultado->execute(array(":usu"=>$Log, ":pas"=>$Pas));
-			
-			header("location:register.php");
-		 
-	    }
-?>
+<script src="sweetalert.min.js"></script>
+
+<script  src="index.js"></script>
+
+<script type="text/javascript">
 
 
+	function validation()
+				{
+           var usu = $('#usu').val();  
+           var contra = $('#contra').val();  
+           if(usu == '' || contra == '')  
+           {  
+		   	swal("¡Error!", "¡Todos los campos son requeridos!", "error");
+		   
+           }  
+           else  
+           {  
+		   swal("¡Genial!", "¡Usuario registrado satisfactoriamente!", "success");
+         
+            
+ }
+ }
+ 
+</script> 
+ 
 
-  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-
-
-    <script  src="index.js"></script>
 
 </body>
 
 </html>
+
 

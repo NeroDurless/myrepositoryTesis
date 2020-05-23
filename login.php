@@ -12,7 +12,13 @@
 <link rel="stylesheet" href="circu.css" />-->
 
 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
 
 <script src="inton.js"></script>
@@ -27,13 +33,13 @@
   <div class="form">
   
   <form action="comprueba_registro.php" method="post" class="register-form">
-      Por favor ingrese solo su nombre y una contraseña con solo números.
+      Sistema de Registro de Pacientes y Control de Citas
       <p></p>
 
-      <input type="text" name="usu" id="usu" required placeholder="Usuario"/>      
+      <input type="text" name="usu" id="usu" class="form-control" required placeholder="Usuario"/>      
       
       
-      <input type="password" name="contra" id="contra" required placeholder="Contraseña"/>
+      <input type="password" name="contra" id="contra" class="form-control" required placeholder="Contraseña"/>
       
       <button onclick="validation();">Crear</button>
       
@@ -46,8 +52,8 @@
     Sistema de Registro de Pacientes y Control de Citas
     <p></p>
       
-        <input type="text" name="login" id="login" required placeholder="Usuario"/>
-          <input type="password" name="password" id="password" required placeholder="Contraseña"/>
+        <input type="text" name="login" id="login" class="form-control" required placeholder="Usuario"/>
+          <input type="password" name="password" id="password" class="form-control" required placeholder="Contraseña"/>
           
         
         <button>login</button>
@@ -59,7 +65,6 @@
   </div>
 </div>
 
-<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
 <script src="sweetalert.min.js"></script>
 
@@ -84,6 +89,11 @@
             
  }
  }
+ 
+ 
+ $(document).ready(function () {
+    $('#usu').tooltip({'trigger':'focus', 'title': 'Ingrese solo su nombre'}); $('#contra').tooltip({'trigger':'focus', 'title': 'Ingrese una contraseña con solo números'});
+	});
  
 </script> 
  

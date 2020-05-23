@@ -44,6 +44,7 @@
 	}catch(Exception $e)
 	
 	{
+		die("Error: " . $e->getMessage());
 					header("location:login.php");
 	}
 
