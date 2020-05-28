@@ -55,7 +55,7 @@
       <td><?php echo $personas->Id?> </td>
       <td><?php echo $personas->Nombre?> </td>
       <td><?php echo $personas->Apellido?> </td>
-      <td><?php echo $personas->Dirección?> </td>
+      <td><?php echo $personas->Direccion?> </td>
       <td><?php echo $personas->Edad?> </td>
       <td><?php echo $personas->Sexo?> </td>
 

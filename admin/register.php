@@ -74,19 +74,19 @@ include('scripts.php');
 
   <div class="card-body">
   
-  <?php
-		if(isset($_SESSION['success']) && $_SESSION['success'] !='')
-		{
-			echo '<h2 class="bg-primary"> '.$_SESSION['success'].' </h2>';
-			unset ($_SESSION['success']);
-		}
+  			<?php
+                    if(isset($_SESSION['success']) && $_SESSION['success'] !='') 
+                    {
+                        echo '<h2 class="bg-info text-white"> '.$_SESSION['success'].' </h2>';
+                        unset($_SESSION['success']);
+                    }
 		
-		if(isset($_SESSION['status']) && $_SESSION['status'] !='')
-		{
-			echo '<h2 class="bg-info"> '.$_SESSION['status'].' </h2>';
-			unset ($_SESSION['status']);
-		}
-?>
+					if(isset($_SESSION['status']) && $_SESSION['status'] !='')
+					{
+						echo '<h2 class="bg-danger text-white""> '.$_SESSION['status'].' </h2>';
+						unset ($_SESSION['status']);
+					}
+			?>
 
     <div class="table-responsive">
     
