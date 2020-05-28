@@ -14,6 +14,6 @@ include('includes/navbar.php');
 
 
   <?php
-include('includes/scripts.php');
+include('scripts.php');
 include('includes/footer.php');
 ?>
