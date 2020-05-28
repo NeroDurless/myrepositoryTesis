@@ -77,7 +77,7 @@ include('scripts.php');
   <?php
 		if(isset($_SESSION['success']) && $_SESSION['success'] !='')
 		{
-			echo '<h2> '.$_SESSION['success'].' </h2>';
+			echo '<h2 class="bg-primary"> '.$_SESSION['success'].' </h2>';
 			unset ($_SESSION['success']);
 		}
 		
@@ -145,8 +145,8 @@ include('scripts.php');
                 </form>
             </td>
             <td>
-                <form action="" method="post">
-                  <input type="hidden" name="delete_id" value="">
+                <form action="scripts.php" method="post">
+                  <input type="hidden" name="delete_id" value="<?php echo $row['Id'];?>" >
                   <button type="submit" name="delete_btn" class="btn btn-danger"> Eliminar</button>
                  
                 </form>

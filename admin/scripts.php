@@ -81,8 +81,32 @@
 
 			}
 
+		}
+		
+		
+		if(isset($_POST["delete_btn"]))
+		{          
+		    $Id=$_POST["delete_id"];   
+			
+		$query = "DELETE FROM DATOS_PERSONAS WHERE Id='$Id'";
+		$query_run = mysqli_query($connection, $query);
+		
+		if($query_run)
+		{
+			$_SESSION['success'] = "Usuario Eliminado Correctamente";
+			header("location:register.php");
 
-		}		
+			}
+	else
+	{
+			$_SESSION['status'] = "El Usuario no ha podido ser Eliminado";
+			header("location:register.php");
+
+			}
+
+		}
+		
+				
 
 ?>
 		
