@@ -103,7 +103,7 @@
 		session_start();
 	 
 		$_SESSION['usuario'] = $_POST["login"];
-		header("location:usuarios_registrados.php");
+		header("location:inicio.php");
 		exit(); 
 	}
 	
@@ -117,7 +117,7 @@
 		session_start();
 	 
 		$_SESSION['adm'] = $_POST["login"];
-		header("location:usuarios_registrados.php");
+		header("location:inicio.php");
 		exit(); 
 	}
 	
@@ -131,7 +131,7 @@
 		session_start();
 		
 		$_SESSION['tec'] = $_POST["login"];
-		header("location:usuarios_registrados.php");
+		header("location:inicio.php");
 		exit(); 
 	}
 	
@@ -145,7 +145,7 @@
 		session_start();
 		
 		$_SESSION['per'] = $_POST["login"];
-		header("location:usuarios_registrados.php");
+		header("location:inicio.php");
 	}
 	
 		else 
