@@ -1,6 +1,5 @@
   <!-- Bootstrap core JavaScript-->
   <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Core plugin JavaScript-->
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
@@ -15,9 +14,25 @@
   <script src="js/demo/chart-area-demo.js"></script>
   <script src="js/demo/chart-pie-demo.js"></script>
 
+  <!-- New scripts -->  
+
+  <script src="vendor/js/jquery.min.js"></script>
+  <script src="vendor/js/moment.min.js"></script>
+  
+  
+<script src="vendor/js/fullcalendar.min.js"></script>
+<script src="vendor/js/es.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="vendor/js/bootstrap-clockpicker.js"></script>
+<link href="css/bootstrap-clockpicker.css" rel="stylesheet">
+
+
+
 
 <?php
 
+
+//*****************************INICIO DE LA BD*****************************//
 	try{
 		$base = new PDO("mysql:host=localhost; dbname=pruebas", "root", "");
 		
@@ -31,8 +46,13 @@
 			echo "Línea del error: " . $e->getLine();
 			error_reporting(E_ALL ^ E_NOTICE);
 }
+//*****************************INICIO DE LA BD*****************************//
+
+//*****************************INICIO DE LA BD*****************************//
 
 	$registros=$base->query("SELECT * FROM DATOS_PERSONAS")->fetchAll(PDO::FETCH_OBJ);
+	$registroscitas=$base->query("SELECT * FROM DATOS_CITAS")->fetchAll(PDO::FETCH_ASSOC);
+
 	//Dentro de la variable $registros tengo un Array de objetos
 
 	if(isset($_POST["cr"]))
@@ -48,10 +68,28 @@
 			$resultado=$base->prepare($sql);
 			
 			$resultado->execute(array(":nom"=>$Nom, ":ape"=>$Ape, ":dir"=>$Dir, ":eda"=>$Eda, ":sex"=>$Sex));
-			
-			
 	    }	
 		
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	  	$connection = mysqli_connect("localhost","root", "",  "pruebas");
 	
