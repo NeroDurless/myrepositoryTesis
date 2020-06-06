@@ -133,44 +133,51 @@ include('includes/navbar.php');
 
       editable: true,
       eventLimit: true, // allow "more" link when too many events
-      events: 'http://localhost/lara/ALL/Sistema%20BKS/myrepositoryTesis/admin/citas.php',
+      events: 
+	  [
+	          {
+          title: 'All Day Event',
+          start: '2018-02-01',
+		  textColor: '#FFFFFF',
+        },
+		]
 	  
-  eventClick: function(calEvent, jsEvent, view) {
+  <!--eventClick: function(calEvent, jsEvent, view) {
 	  
-	  		 $('#btnAgregar').prop("disabled",true);
-			$('#btnModificar').prop("disabled",false);
-			$('#btnEliminar').prop("disabled",false);
-		   
-		$('#exampleModalLabel').html(calEvent.title);
+	  		 //$('#btnAgregar').prop("disabled",true);
+//			$('#btnModificar').prop("disabled",false);
+//			$('#btnEliminar').prop("disabled",false);
+//		   
+//		$('#exampleModalLabel').html(calEvent.title);
+//
+//		$('#txtDescripcion').val(calEvent.description);
+//		$('#txtId').val(calEvent.id);
+//		$('#txtTitulo').val(calEvent.title);
+//		$('#txtColor').val(calEvent.color);
+//		
+//		FechaHora= calEvent.start._i.split(" ");
+//		$('#txtFecha').val(FechaHora[0]);
+//		$('#txtHora').val(FechaHora[1]);
+//	
+//	    $("#addcita").modal();
+// 	 },
+//	 editable:true,
+//	 eventDrop:function(calEvent){
+//		 
+//		$('#txtId').val(calEvent.id);
+//		$('#txtTitulo').val(calEvent.title);
+//		$('#txtColor').val(calEvent.color);
+//		$('#txtDescripcion').val(calEvent.description);
+//		
+//		var FechaHora= calEvent.start.format().split("T");
+//		$('#txtFecha').val(FechaHora[0]);
+//		$('#txtHora').val(FechaHora[1]);
+//		
+//	   RecolectarDatosGUI();
+//	   EnviarInformacion('modificar', NuevoEvento,true);		
 
-		$('#txtDescripcion').val(calEvent.description);
-		$('#txtId').val(calEvent.id);
-		$('#txtTitulo').val(calEvent.title);
-		$('#txtColor').val(calEvent.color);
-		
-		FechaHora= calEvent.start._i.split(" ");
-		$('#txtFecha').val(FechaHora[0]);
-		$('#txtHora').val(FechaHora[1]);
-	
-	    $("#addcita").modal();
- 	 },
-	 editable:true,
-	 eventDrop:function(calEvent){
-		 
-		$('#txtId').val(calEvent.id);
-		$('#txtTitulo').val(calEvent.title);
-		$('#txtColor').val(calEvent.color);
-		$('#txtDescripcion').val(calEvent.description);
-		
-		var FechaHora= calEvent.start.format().split("T");
-		$('#txtFecha').val(FechaHora[0]);
-		$('#txtHora').val(FechaHora[1]);
-		
-	   RecolectarDatosGUI();
-	   EnviarInformacion('modificar', NuevoEvento,true);		
-
-}
-
+//}
+-->
 
 	 
 	 
