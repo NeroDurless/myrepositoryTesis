@@ -11,10 +11,10 @@
 
 //include('login.php');
 
-	$usuario= ( empty($_POST['usu']) )   ? NULL : $_POST['usu'];
+/*	$usuario= ( empty($_POST['usu']) )   ? NULL : $_POST['usu'];
 	$contraseña= ( empty($_POST['contra']) ? NULL : $_POST['contra']);
 	
-	$pass_cifrado=password_hash($contraseña, PASSWORD_DEFAULT, array("cost"=>12)) ;
+	$pass_cifrado=password_hash($contraseña, PASSWORD_DEFAULT, array("cost"=>12)) ;*/
 	
 	
 
