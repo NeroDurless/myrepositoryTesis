@@ -133,7 +133,8 @@ include('includes/navbar.php');
 
       editable: true,
       eventLimit: true, // allow "more" link when too many events
-      events: 'http://localhost/GIT/myrepositoryTesis/citas.php',
+	  events: 'http://localhost/myrepositoryTesis/citas.php',
+//     events: 'http://localhost/lara/ALL/Sistema%20BKS/myrepositoryTesis/citas.php',
 	  
   eventClick: function(calEvent, jsEvent, view) {
 	  
