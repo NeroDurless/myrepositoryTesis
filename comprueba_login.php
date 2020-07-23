@@ -81,11 +81,11 @@
 		//rowCount() me dice el número de registros que devuelve una consulta
 		
 		
-/*		while ($registro=$resultado->fetch(PDO::FETCH_ASSOC))
+		while ($numero_registro=$resultado->fetch(PDO::FETCH_ASSOC))
 		{
 
 
-			if(password_verify($password, $registro['PASSWORD']))
+			if(password_verify($password, $numero_registro['PASSWORD']))
 				{
 					$contador++;
 				}
@@ -95,7 +95,7 @@
 			if($contador>0)
 				{
 					header("location:login.php");
-				}*/
+				}
 
 		
 		if($numero_registro != 0) 
