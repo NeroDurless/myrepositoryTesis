@@ -18,7 +18,12 @@
      <input type="text" name="usu" id="usu" required placeholder="Usuario"/>      
       
       
-      <input type="password" name="contra" id="contra" required placeholder="Contraseña"/>
+     <input type="password" name="contra" id="contra" required placeholder="Contraseña"/>
+      
+     <input type="text" name="cedula" id="cedula" required placeholder="Cédula"/>
+            
+     <input type="email" name="correo" id="correo" required placeholder="Correo electrónico"/>
+
       
       <button onclick="validation();">Crear</button>
       

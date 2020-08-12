@@ -44,7 +44,7 @@ include('scripts.php');
 		       
 		 @$busqueda=$_GET["buscar"];  
 			
-		$query = "SELECT * FROM DATOS_PERSONAS WHERE NOMBRE='$busqueda'";
+		$query = "SELECT * FROM DATOS_PERSONAS WHERE CEDULA='$busqueda'";
 		$query_run = mysqli_query($connection, $query);
 	  ?>  
   
@@ -83,9 +83,12 @@ include('scripts.php');
             <th> ID </th>
             <th> Nombre </th>
             <th>Apellido </th>
+            <th>Cédula </th>
+            <th>Correo </th>
             <th>Dirección</th>
             <th>Edad </th>
             <th>Sexo</th>
+            <th>Historia médica</th>
           </tr>
         </thead>
         <tbody>
@@ -104,9 +107,12 @@ include('scripts.php');
   	  <td><?php echo $row['Id'];?> </td>
       <td><?php echo $row['Nombre'];?> </td>
       <td><?php echo $row['Apellido'];?> </td>
+      <td><?php echo $row['Cedula'];?> </td>
+      <td><?php echo $row['Correo'];?> </td>
       <td><?php echo $row['Direccion'];?> </td>
       <td><?php echo $row['Edad'];?> </td>
       <td><?php echo $row['Sexo'];?> </td>
+      <td><?php echo $row['Historia'];?> </td>
             
           </tr>
           

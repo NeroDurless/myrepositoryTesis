@@ -52,6 +52,16 @@ include('scripts.php');
             </div>
             
             <div class="form-group">
+                <label>Cédula</label>
+                <input type="text" name="edit_Ced" value="<?php echo $row['Cedula'];?>" class="form-control" placeholder="Ingrese Cédula...">
+            </div>
+            
+            <div class="form-group">
+                <label>Correo</label>
+                <input type="email" name="edit_Ema" value="<?php echo $row['Correo'];?>" class="form-control" placeholder="Ingrese Correo electrónico...">
+            </div>
+            
+            <div class="form-group">
                 <label>Dirección</label>
                 <input type="text" name="edit_Dir" value="<?php echo $row['Direccion'];?>" class="form-control" placeholder="Ingrese Dirección...">
             </div>
@@ -66,7 +76,12 @@ include('scripts.php');
                 <input type="text" name="edit_Sex" value="<?php echo $row['Sexo'];?>" class="form-control" placeholder="Ingrese Sexo...">
             </div>
             
-            <a href="register.php" class="btn btn-danger pull-left" role="button"> Cancelar</a>
+            <div class="form-group">
+                <label>Historia médica</label>
+                <textarea type="text" name="edit_His" value="<?php echo $row['Historia'];?>" class="form-control" placeholder="Ingrese breve Historia médica..."></textarea>
+            </div>
+            
+            <a href="register2.php" class="btn btn-danger pull-left" role="button"> Cancelar</a>
          <button type="submit" name="updatebtn" class="btn btn-primary"> Actualizar</button>
 
   </form>

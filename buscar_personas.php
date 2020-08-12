@@ -37,6 +37,8 @@
     	<td class="primera_fila">Id</td>
         <td class="primera_fila">Nombre</td>
         <td class="primera_fila">Apellido</td>
+        <td class="primera_fila">Cédula</td>
+        <td class="primera_fila">Correo</td>
         <td class="primera_fila">Dirección</td>
         <td class="primera_fila">Edad</td>
         <td class="primera_fila">Sexo</td>
@@ -55,6 +57,8 @@
       <td><?php echo $personas->Id?> </td>
       <td><?php echo $personas->Nombre?> </td>
       <td><?php echo $personas->Apellido?> </td>
+      <td><?php echo $personas->Cedula?> </td>
+      <td><?php echo $personas->Correo?> </td>
       <td><?php echo $personas->Direccion?> </td>
       <td><?php echo $personas->Edad?> </td>
       <td><?php echo $personas->Sexo?> </td>

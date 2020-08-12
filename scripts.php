@@ -59,15 +59,20 @@
 		{	
 			$Nom=$_POST["Nom"];
 			$Ape=$_POST["Ape"];
+			$Ced=$_POST["Ced"];
+			$Ema=$_POST["Ema"];
 			$Dir=$_POST["Dir"];
 			$Eda=$_POST["Eda"];
 			$Sex=$_POST["Sex"];
+			$His=$_POST["His"];
+
 			
-			$sql="INSERT INTO DATOS_PERSONAS (NOMBRE, APELLIDO, DIRECCION, EDAD, SEXO) VALUES (:nom, :ape, :dir, :eda, :sex)";
+			$sql="INSERT INTO DATOS_PERSONAS (NOMBRE, APELLIDO, CEDULA, CORREO, DIRECCION, EDAD, SEXO, HISTORIA) VALUES (:nom, :ape, :ced, :ema, :dir, :eda, :sex, :his)";
 			
 			$resultado=$base->prepare($sql);
 			
-			$resultado->execute(array(":nom"=>$Nom, ":ape"=>$Ape, ":dir"=>$Dir, ":eda"=>$Eda, ":sex"=>$Sex));
+			$resultado->execute(array(":nom"=>$Nom, ":ape"=>$Ape, ":ced"=>$Ced,
+			 ":ema"=>$Ema, ":dir"=>$Dir, ":eda"=>$Eda, ":sex"=>$Sex, ":his"=>$His));
 	    }	
 		
 	
@@ -99,11 +104,14 @@
 		    $Id=$_POST["edit_Id"];      
 			$Nom=$_POST["edit_Nom"];
 			$Ape=$_POST["edit_Ape"];
+			$Ced=$_POST["edit_Ced"];
+			$Ema=$_POST["edit_Ema"];
 			$Dir=$_POST["edit_Dir"];
 			$Eda=$_POST["edit_Eda"];
 			$Sex=$_POST["edit_Sex"];
+			$His=$_POST["edit_His"];
 			
-		$query = "UPDATE DATOS_PERSONAS SET Nombre='$Nom', Apellido='$Ape',Direccion='$Dir',Edad='$Eda',Sexo='$Sex' WHERE Id='$Id'";
+		$query = "UPDATE DATOS_PERSONAS SET Nombre='$Nom', Apellido='$Ape',Cedula='$Ced',Correo='$Ema',Direccion='$Dir',Edad='$Eda',Sexo='$Sex,Historia='$His' WHERE Id='$Id'";
 		$query_run = mysqli_query($connection, $query);
 		
 		if($query_run)

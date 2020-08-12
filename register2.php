@@ -36,6 +36,17 @@ include('scripts.php');
                 <input type="text" name="Ape" class="form-control" placeholder="Ingrese Apellido...">
             </div>
             
+               <div class="form-group">
+             <label> Cédula </label>
+                <input type="text" name="Ced" class="form-control" placeholder="Ingrese Cédula...">
+            </div>
+            
+            <div class="form-group">
+                <label>Correo electrónico</label>
+                <input type="email" name="Ema" class="form-control" placeholder="Ingrese Correo electrónico...">
+            </div>
+            
+            
             <div class="form-group">
                 <label>Dirección</label>
                 <input type="text" name="Dir" class="form-control" placeholder="Ingrese Dirección...">
@@ -49,6 +60,11 @@ include('scripts.php');
             <div class="form-group">
                 <label>Sexo</label>
                 <input type="text" name="Sex" class="form-control" placeholder="Ingrese Sexo...">
+            </div>
+            
+            <div class="form-group">
+                <label>Historia médica</label>
+              <textarea name="His" class="form-control" placeholder="Ingrese breve historia médica..."></textarea>
             </div>
         
         </div>
@@ -132,9 +148,12 @@ include('scripts.php');
             <th> ID </th>
             <th> Nombre </th>
             <th>Apellido </th>
+            <th>Cédula </th>
+            <th>Correo electrónico </th>
             <th>Dirección</th>
             <th>Edad </th>
             <th>Sexo</th>
+            <th>Historia médica</th>
             <th>Editar </th>
             <th>Eliminar </th>
           </tr>
@@ -155,9 +174,13 @@ include('scripts.php');
   	  <td><?php echo $row['Id'];?> </td>
       <td><?php echo $row['Nombre'];?> </td>
       <td><?php echo $row['Apellido'];?> </td>
+      <td><?php echo $row['Cedula'];?> </td>
+      <td><?php echo $row['Correo'];?> </td>
       <td><?php echo $row['Direccion'];?> </td>
       <td><?php echo $row['Edad'];?> </td>
       <td><?php echo $row['Sexo'];?> </td>
+      <td><?php echo $row['Historia'];?> </td>
+
             <td>
 
             
